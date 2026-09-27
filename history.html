@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>تاریخچه منچستر یونایتد | Manchester United History</title>
+
+<meta name="description"
+content="تاریخچه منچستر یونایتد از تأسیس باشگاه تا دوران سر الکس فرگوسن، افتخارات و لحظات تاریخی شیاطین سرخ.">
+
+<link rel="canonical"
+href="https://drbehfar.github.io/Manchester_united/history.html">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Tahoma,Arial,sans-serif;
+    background:#070707;
+    color:#fff;
+    line-height:1.9;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(7,7,7,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(218,41,28,.25);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:900;
+    color:#fff;
+}
+
+.logo span{
+    color:#da291c;
+}
+
+.nav a{
+    color:#ddd;
+    text-decoration:none;
+    margin-right:20px;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav a:hover{
+    color:#da291c;
+}
+
+.hero{
+    min-height:520px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+    background:
+    radial-gradient(circle at center,
+    rgba(218,41,28,.22),
+    transparent 45%),
+    linear-gradient(180deg,#160505,#070707);
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.eyebrow{
+    color:#da291c;
+    font-weight:bold;
+    letter-spacing:3px;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:clamp(42px,8vw,90px);
+    line-height:1;
+    font-weight:1000;
+    letter-spacing:2px;
+}
+
+.hero h1 span{
+    color:#da291c;
+}
+
+.hero p{
+    max-width:700px;
+    margin:30px auto 0;
+    color:#bbb;
+    font-size:17px;
+}
+
+.section{
+    max-width:1050px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title h2{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#888;
+}
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    right:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:linear-gradient(
+        to bottom,
+        transparent,
+        #da291c,
+        #da291c,
+        transparent
+    );
+}
+
+.event{
+    width:50%;
+    padding:20px 35px;
+    position:relative;
+}
+
+.event:nth-child(odd){
+    margin-left:0;
+    text-align:left;
+}
+
+.event:nth-child(even){
+    margin-right:50%;
+    text-align:right;
+}
+
+.event::after{
+    content:"";
+    position:absolute;
+    top:35px;
+    width:14px;
+    height:14px;
+    background:#da291c;
+    border-radius:50%;
+    box-shadow:0 0 20px rgba(218,41,28,.7);
+}
+
+.event:nth-child(odd)::after{
+    right:-7px;
+}
+
+.event:nth-child(even)::after{
+    left:-7px;
+}
+
+.event-card{
+    background:linear-gradient(145deg,#151515,#0d0d0d);
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:18px;
+    padding:25px;
+    transition:.35s;
+}
+
+.event-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(218,41,28,.6);
+    box-shadow:0 15px 40px rgba(218,41,28,.12);
+}
+
+.year{
+    color:#da291c;
+    font-size:26px;
+    font-weight:900;
+    margin-bottom:8px;
+}
+
+.event-card h3{
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.event-card p{
+    color:#aaa;
+    font-size:14px;
+}
+
+.highlight{
+    margin-top:70px;
+    padding:45px 30px;
+    border-radius:25px;
+    text-align:center;
+    background:
+    linear-gradient(
+        135deg,
+        rgba(218,41,28,.18),
+        rgba(20,20,20,.9)
+    );
+    border:1px solid rgba(218,41,28,.3);
+}
+
+.highlight h2{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.highlight p{
+    color:#bbb;
+    max-width:750px;
+    margin:auto;
+}
+
+.back-btn{
+    display:inline-flex;
+    margin-top:30px;
+    padding:13px 25px;
+    border-radius:12px;
+    background:#da291c;
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 30px rgba(218,41,28,.3);
+}
+
+footer{
+    text-align:center;
+    padding:35px 20px;
+    border-top:1px solid rgba(255,255,255,.07);
+    color:#777;
+    font-size:13px;
+}
+
+footer span{
+    color:#da291c;
+}
+
+@media(max-width:700px){
+
+    .nav{
+        flex-direction:column;
+    }
+
+    .nav a{
+        margin:0 7px;
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:430px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .timeline::before{
+        right:10px;
+    }
+
+    .event,
+    .event:nth-child(odd),
+    .event:nth-child(even){
+        width:100%;
+        margin:0;
+        padding:15px 0 15px 35px;
+        text-align:right;
+    }
+
+    .event::after,
+    .event:nth-child(odd)::after,
+    .event:nth-child(even)::after{
+        right:3px;
+        left:auto;
+    }
+
+    .title h2{
+        font-size:27px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+<span>Manchester</span> United
+</div>
+
+<div>
+
+<a href="index.html">خانه</a>
+<a href="players.html">بازیکنان</a>
+<a href="#history">تاریخچه</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+THE RED DEVILS
+</div>
+
+<h1>
+MANCHESTER
+<span>UNITED</span>
+</h1>
+
+<p>
+بیش از یک قرن فوتبال، افتخار، شکست، بازگشت و لحظاتی که
+نام منچستر یونایتد را در تاریخ فوتبال جاودانه کردند.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section" id="history">
+
+<div class="title">
+
+<div class="eyebrow">
+THE HISTORY
+</div>
+
+<h2>
+تاریخچه منچستر یونایتد
+</h2>
+
+<p>
+از نیوتون هیث تا شیاطین سرخ امروزی
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="event">
+
+<div class="event-card">
+
+<div class="year">
+1878
+</div>
+
+<h3>
+آغاز داستان
+</h3>
+
+<p>
+باشگاه در سال ۱۸۷۸ با نام Newton Heath L&YR شکل گرفت و
+فعالیت خود را به عنوان تیم کارکنان راه‌آهن آغاز کرد.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-card">
+
+<div class="year">
+1902
+</div>
+
+<h3>
+تولد منچستر یونایتد
+</h3>
+
+<p>
+پس از مشکلات مالی، باشگاه در سال ۱۹۰۲ بازسازی شد و نام
+Manchester United را به خود گرفت.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-card">
+
+<div class="year">
+1908
+</div>
+
+<h3>
+اولین قهرمانی لیگ
+</h3>
+
+<p>
+منچستر یونایتد در سال ۱۹۰۸ نخستین قهرمانی خود در لیگ
+انگلیس را به دست آورد.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-card">
+
+<div class="year">
+1950s
+</div>
+
+<h3>
+نسل طلایی باسبی
+</h3>
+
+<p>
+دوران سر مت بازبی با ظهور بازیکنان جوان و شکل‌گیری
+نسلی مشهور از بازیکنان باشگاه همراه شد.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-card">
+
+<div class="year">
+1958
+</div>
+
+<h3>
+فاجعه مونیخ
+</h3>
+
+<p>
+حادثه هوایی مونیخ یکی از تلخ‌ترین اتفاقات تاریخ باشگاه بود.
+منچستر یونایتد پس از این حادثه دوباره برای ساختن تیمی بزرگ تلاش کرد.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-card">
+
+<div class="year">
+1968
+</div>
+
+<h3>
+قهرمانی اروپا
+</h3>
+
+<p>
+منچستر یونایتد با هدایت مت بازبی به نخستین قهرمانی خود
+در جام اروپا رسید.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-card">
+
+<div class="year">
+1986
+</div>
+
+<h3>
+ورود سر الکس فرگوسن
+</h3>
+
+<p>
+سر الکس فرگوسن هدایت منچستر یونایتد را بر عهده گرفت و
+دورانی تاریخی در باشگاه آغاز شد.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-card">
+
+<div class="year">
+1999
+</div>
+
+<h3>
+شب تاریخی بارسلونا
+</h3>
+
+<p>
+منچستر یونایتد در فینال لیگ قهرمانان اروپا در وقت‌های
+پایانی مقابل بایرن مونیخ بازگشت و جام را فتح کرد.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-card">
+
+<div class="year">
+2008
+</div>
+
+<h3>
+قهرمانی اروپا در مسکو
+</h3>
+
+<p>
+یونایتد در فینال لیگ قهرمانان اروپا مقابل چلسی به پیروزی
+رسید و سومین قهرمانی اروپایی خود را جشن گرفت.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="event">
+
+<div class="event-card">
+
+<div class="year">
+2013
+</div>
+
+<h3>
+پایان یک دوران
+</h3>
+
+<p>
+سر الکس فرگوسن پس از بیش از دو دهه حضور در باشگاه،
+از مربیگری منچستر یونایتد کناره‌گیری کرد.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="highlight">
+
+<h2>
+یک باشگاه؛ یک تاریخ؛ میلیون‌ها هوادار 🔴
+</h2>
+
+<p>
+داستان منچستر یونایتد فقط مجموعه‌ای از جام‌ها نیست؛
+داستان نسل‌هایی از بازیکنان، مربیان و هوادارانی است که
+در طول سال‌ها بخشی از هویت این باشگاه شده‌اند.
+</p>
+
+<a href="index.html" class="back-btn">
+بازگشت به صفحه اصلی ←
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+ساخته شده با ❤️ برای هواداران
+<span>Manchester United</span>
+
+<br>
+
+Dr. Behfar
+
+</footer>
+
+</body>
+
+</html>
