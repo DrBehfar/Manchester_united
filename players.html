@@ -1,1 +1,749 @@
-.
+<!DOCTYPE html><html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>بازیکنان منچستر یونایتد ۲۰۲۶/۲۷ | Manchester United Players</title><meta name="description" content="معرفی بازیکنان منچستر یونایتد در فصل ۲۰۲۶/۲۷؛ دروازه‌بان‌ها، مدافعان، هافبک‌ها و مهاجمان شیاطین سرخ."><link rel="canonical" href="https://drbehfar.github.io/Manchester_united/players.html"><meta property="og:title" content="بازیکنان منچستر یونایتد ۲۰۲۶/۲۷">
+<meta property="og:description" content="فهرست و معرفی بازیکنان منچستر یونایتد در فصل ۲۰۲۶/۲۷.">
+<meta property="og:url" content="https://drbehfar.github.io/Manchester_united/players.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fa_IR"><style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Tahoma,Arial,sans-serif;
+    background:
+    radial-gradient(circle at 15% 15%,rgba(218,41,28,.20),transparent 25%),
+    radial-gradient(circle at 85% 40%,rgba(218,41,28,.13),transparent 25%),
+    linear-gradient(135deg,#070707,#100706 55%,#050505);
+    color:#fff;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+    opacity:.07;
+    background-image:
+    linear-gradient(30deg,#da291c 12%,transparent 12.5%,transparent 87%,#da291c 87.5%),
+    linear-gradient(150deg,#da291c 12%,transparent 12.5%,transparent 87%,#da291c 87.5%);
+    background-size:80px 140px;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(5,5,5,.90);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(218,41,28,.25);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:16px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+    direction:ltr;
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.logo b{
+    color:#da291c;
+}
+
+.logo-badge img{
+    width:38px;
+    height:38px;
+    object-fit:contain;
+}
+
+.menu{
+    display:flex;
+    gap:22px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+.menu a{
+    font-size:14px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#da291c;
+}
+
+.hero{
+    max-width:1200px;
+    margin:auto;
+    padding:100px 25px 70px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:#da291c;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:clamp(38px,7vw,78px);
+    line-height:1;
+    font-weight:900;
+    direction:ltr;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#da291c;
+}
+
+.hero p{
+    max-width:760px;
+    margin:auto;
+    color:#ccc;
+    line-height:2;
+    font-size:17px;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:13px 25px;
+    border-radius:12px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn.red{
+    background:#da291c;
+}
+
+.btn.dark{
+    background:#151515;
+    border:1px solid #333;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 25px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.title p{
+    color:#aaa;
+    line-height:1.9;
+}
+
+.position-title{
+    margin:60px 0 25px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.position-title h2{
+    font-size:25px;
+    white-space:nowrap;
+}
+
+.position-line{
+    height:2px;
+    flex:1;
+    background:linear-gradient(90deg,transparent,#da291c);
+}
+
+.players-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.player-card{
+    position:relative;
+    overflow:hidden;
+    min-height:430px;
+    border-radius:20px;
+    background:
+    linear-gradient(145deg,rgba(218,41,28,.13),rgba(255,255,255,.025));
+    border:1px solid rgba(255,255,255,.08);
+    transition:.35s ease;
+}
+
+.player-card:hover{
+    transform:translateY(-7px);
+    border-color:rgba(218,41,28,.7);
+    box-shadow:0 18px 45px rgba(0,0,0,.45);
+}
+
+.player-image{
+    width:100%;
+    height:330px;
+    display:block;
+    object-fit:cover;
+    object-position:center top;
+    background:#111;
+    transition:.4s ease;
+}
+
+.player-card:hover .player-image{
+    transform:scale(1.03);
+}
+
+.player-number{
+    position:absolute;
+    top:12px;
+    left:15px;
+    z-index:2;
+    font-size:35px;
+    font-weight:900;
+    color:rgba(255,255,255,.16);
+    direction:ltr;
+}
+
+.player-info{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:25px 20px 20px;
+    background:linear-gradient(
+        transparent,
+        rgba(5,5,5,.95) 35%
+    );
+    padding-top:55px;
+}
+
+.player-info h3{
+    font-size:21px;
+    margin-bottom:7px;
+}
+
+.english{
+    color:#999;
+    font-size:13px;
+    direction:ltr;
+    text-align:right;
+    margin-bottom:13px;
+}
+
+.player-meta{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+}
+
+.badge{
+    display:inline-block;
+    padding:5px 9px;
+    border-radius:7px;
+    background:rgba(218,41,28,.14);
+    border:1px solid rgba(218,41,28,.25);
+    color:#ddd;
+    font-size:11px;
+}
+
+.info-box{
+    margin-top:70px;
+    padding:30px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#180000,#0d0d0d);
+    border:1px solid rgba(218,41,28,.3);
+    text-align:center;
+}
+
+.info-box h2{
+    margin-bottom:15px;
+}
+
+.info-box p{
+    color:#bbb;
+    line-height:2;
+}
+
+footer{
+    margin-top:60px;
+    padding:40px 25px;
+    text-align:center;
+    border-top:1px solid rgba(218,41,28,.2);
+    background:#050505;
+}
+
+.footer-logo{
+    font-size:24px;
+    font-weight:900;
+    direction:ltr;
+}
+
+.footer-logo span{
+    color:#da291c;
+}
+
+.footer-text{
+    color:#777;
+    margin-top:12px;
+}
+
+@media(max-width:1000px){
+
+    .players-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:800px){
+
+    .navbar{
+        flex-direction:column;
+    }
+
+    .menu{
+        justify-content:center;
+        gap:14px;
+    }
+
+    .players-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:550px){
+
+    .hero{
+        padding-top:70px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .players-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:50px 18px;
+    }
+
+    .position-title h2{
+        font-size:21px;
+    }
+
+    .player-card{
+        min-height:450px;
+    }
+
+    .player-image{
+        height:350px;
+    }
+
+}
+
+</style></head><body><header class="header"><nav class="navbar"><a href="index.html" class="logo"><div class="logo-badge">
+<img
+src="https://mutv.manutd.com/assets/images/mu_logo.png"
+alt="لوگوی منچستر یونایتد">
+</div>Manchester <b>United</b>
+
+</a><ul class="menu"><li><a href="index.html">خانه</a></li><li><a href="index.html#about">باشگاه</a></li><li><a href="#players">بازیکنان</a></li><li><a href="index.html#legends">اسطوره‌ها</a></li><li><a href="index.html#trophies">افتخارات</a></li><li><a href="index.html#history">تاریخچه</a></li></ul><a href="index.html#ferguson">سر الکس فرگوسن</a>
+
+</nav></header><main><section class="hero"><div class="eyebrow">
+MANCHESTER UNITED • 2026/27
+</div><h1>
+MANCHESTER <span>UNITED</span>
+</h1><p>
+بازیکنان منچستر یونایتد در فصل ۲۰۲۶/۲۷؛
+از ستاره‌های خط میانی و مهاجمان تا مدافعان و دروازه‌بان‌های شیاطین سرخ.
+</p><div class="buttons"><a class="btn red" href="#players">
+مشاهده بازیکنان 🔴
+</a><a class="btn dark" href="index.html">
+بازگشت به صفحه اصلی
+</a></div></section><section class="section" id="players"><div class="title"><div class="eyebrow">
+FIRST TEAM SQUAD
+</div><h2>
+بازیکنان منچستر یونایتد
+</h2><p>
+فهرست تیم اصلی منچستر یونایتد برای فصل ۲۰۲۶/۲۷
+</p></div><div id="squad"></div><div class="info-box"><h2>
+منچستر یونایتد در فصل ۲۰۲۶/۲۷ 🔴
+</h2><p>
+فهرست بازیکنان تیم اصلی منچستر یونایتد برای فصل ۲۰۲۶/۲۷
+در این صفحه برای معرفی بازیکنان و ساخت آرشیو هواداری باشگاه نمایش داده شده است.
+</p></div></section></main><footer><div class="footer-logo">
+Manchester <span>United</span>
+</div><p class="footer-text">
+Welcome to the world of the Red Devils ❤️
+</p><p style="margin-top:20px;color:#555;">
+این صفحه بخشی از سایت هواداری منچستر یونایتد — کاری از Dr. Behfar
+</p><div style="margin-top:25px;"><a class="btn red" href="index.html">
+← بازگشت به سایت اصلی
+</a></div></footer><script>
+
+const players = [
+
+{
+name:"برونو فرناندز",
+english:"Bruno Fernandes",
+number:"8",
+position:"هافبک",
+country:"🇵🇹 پرتغال",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896330/media_102559977_102167101.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"ماتئوس کونیا",
+english:"Matheus Cunha",
+number:"10",
+position:"مهاجم",
+country:"🇧🇷 برزیل",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896326/media_102559903_102167027.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"برایان امبومو",
+english:"Bryan Mbeumo",
+number:"19",
+position:"مهاجم",
+country:"🇨🇲 کامرون",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896326/media_102559904_102167026.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"بنجامین ششکو",
+english:"Benjamin Šeško",
+number:"30",
+position:"مهاجم",
+country:"🇸🇮 اسلوونی",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896326/media_102559907_102167031.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"آماد دیالو",
+english:"Amad",
+number:"16",
+position:"مهاجم",
+country:"🇨🇮 ساحل عاج",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896326/media_102559906_102167030.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"مارکوس رشفورد",
+english:"Marcus Rashford",
+number:"9",
+position:"مهاجم",
+country:"🏴 انگلیس",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/6301618/media_125181652_124797291_compressed.jpg?f=center&fmt=webp&h=480&w=720"
+},
+
+{
+name:"جاشوا زیرکزی",
+english:"Joshua Zirkzee",
+number:"11",
+position:"مهاجم",
+country:"🇳🇱 هلند",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896326/media_102559902_102167028.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"کارلوس بالبا",
+english:"Carlos Baleba",
+number:"20",
+position:"هافبک",
+country:"🇨🇲 کامرون",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/5955367/media_120963187_120576617.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"میسون مونت",
+english:"Mason Mount",
+number:"7",
+position:"هافبک",
+country:"🏴 انگلیس",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896330/media_102559976_102167100.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"آندری سانتوس",
+english:"Andrey Santos",
+number:"17",
+position:"هافبک",
+country:"🇧🇷 برزیل",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/5330430/media_113637564_113246603_compressed.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"یوری تیلمانس",
+english:"Youri Tielemans",
+number:"18",
+position:"هافبک",
+country:"🇧🇪 بلژیک",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/5368351/media_114350399_113959456.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"مانوئل اوگارته",
+english:"Manuel Ugarte",
+number:"25",
+position:"هافبک",
+country:"🇺🇾 اروگوئه",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896330/media_102559981_102167105.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"پاتریک دورگو",
+english:"Patrick Dorgu",
+number:"13",
+position:"مدافع",
+country:"🇩🇰 دانمارک",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559867_102166991.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"دیوگو دالوت",
+english:"Diogo Dalot",
+number:"2",
+position:"مدافع",
+country:"🇵🇹 پرتغال",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559860_102166986.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"ماتیاس دلیخت",
+english:"Matthijs de Ligt",
+number:"4",
+position:"مدافع",
+country:"🇳🇱 هلند",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559865_102166989.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"هری مگوایر",
+english:"Harry Maguire",
+number:"5",
+position:"مدافع",
+country:"🏴 انگلیس",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559861_102166984.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"لیساندرو مارتینز",
+english:"Lisandro Martínez",
+number:"6",
+position:"مدافع",
+country:"🇦🇷 آرژانتین",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559864_102166988.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"نصیر مزراوی",
+english:"Noussair Mazraoui",
+number:"3",
+position:"مدافع",
+country:"🇲🇦 مراکش",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559862_102166985.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"لوک شاو",
+english:"Luke Shaw",
+number:"23",
+position:"مدافع",
+country:"🏴 انگلیس",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559870_102166995.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"کارل دارلو",
+english:"Karl Darlow",
+number:"12",
+position:"دروازه‌بان",
+country:"🏴 ولز",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/5336994/media_113873039_113482082.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"تام هیتون",
+english:"Tom Heaton",
+number:"22",
+position:"دروازه‌بان",
+country:"🏴 انگلیس",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896327/media_102559945_102167073.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"سنّه لامنس",
+english:"Senne Lammens",
+number:"1",
+position:"دروازه‌بان",
+country:"🇧🇪 بلژیک",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896327/media_102559948_102167072.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"درموت می",
+english:"Dermot Mee",
+number:"45",
+position:"دروازه‌بان",
+country:"🇬🇧 ایرلند شمالی",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896327/media_102559949_102167071.jpg?f=center&fmt=webp&h=981&w=720"
+}
+
+];
+
+
+const groups = [
+
+{
+title:"🔥 مهاجمان",
+position:"مهاجم"
+},
+
+{
+title:"⚙️ هافبک‌ها",
+position:"هافبک"
+},
+
+{
+title:"🛡️ مدافعان",
+position:"مدافع"
+},
+
+{
+title:"🧤 دروازه‌بان‌ها",
+position:"دروازه‌بان"
+}
+
+];
+
+
+const squad = document.getElementById("squad");
+
+
+groups.forEach(group => {
+
+const title = document.createElement("div");
+
+title.className = "position-title";
+
+title.innerHTML = `
+<h2>${group.title}</h2>
+<div class="position-line"></div>
+`;
+
+squad.appendChild(title);
+
+
+const grid = document.createElement("div");
+
+grid.className = "players-grid";
+
+
+players
+.filter(player => player.position === group.position)
+.forEach(player => {
+
+const card = document.createElement("article");
+
+card.className = "player-card";
+
+card.innerHTML = `
+
+<div class="player-number">
+#${player.number}
+</div>
+
+<img
+class="player-image"
+src="${player.image}"
+alt="${player.name} ${player.english}، بازیکن منچستر یونایتد"
+loading="lazy"
+>
+
+<div class="player-info">
+
+<h3>
+${player.name}
+</h3>
+
+<div class="english">
+${player.english}
+</div>
+
+<div class="player-meta">
+
+<span class="badge">
+${player.position}
+</span>
+
+<span class="badge">
+${player.country}
+</span>
+
+</div>
+
+</div>
+
+`;
+
+grid.appendChild(card);
+
+});
+
+
+squad.appendChild(grid);
+
+});
+
+</script></body>
+</html>
