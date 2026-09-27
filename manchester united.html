@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manchester United | Red Devils</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+    font-family:Tahoma,Arial,sans-serif;
+    background:
+      radial-gradient(circle at 15% 15%,rgba(218,41,28,.20),transparent 25%),
+      radial-gradient(circle at 85% 40%,rgba(218,41,28,.13),transparent 25%),
+      linear-gradient(135deg,#070707,#100706 55%,#050505);
+    color:#fff;min-height:100vh;overflow-x:hidden
+}
+body:before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;opacity:.07;
+    background-image:
+      linear-gradient(30deg,#da291c 12%,transparent 12.5%,transparent 87%,#da291c 87.5%),
+      linear-gradient(150deg,#da291c 12%,transparent 12.5%,transparent 87%,#da291c 87.5%);
+    background-size:80px 140px
+}
+body:after{
+    content:"";position:fixed;width:500px;height:500px;border-radius:50%;
+    background:#da291c;filter:blur(180px);opacity:.05;right:-250px;top:20%;pointer-events:none;z-index:-1
+}
+a{color:inherit}
+::selection{background:#da291c;color:#fff}
+::-webkit-scrollbar{width:9px}
+::-webkit-scrollbar-track{background:#070707}
+::-webkit-scrollbar-thumb{background:#da291c;border-radius:20px}
+
+.header{position:sticky;top:12px;z-index:999;padding:0 22px}
+.navbar{
+    max-width:1280px;margin:auto;padding:15px 24px;display:flex;justify-content:space-between;align-items:center;gap:25px;
+    background:rgba(10,10,10,.76);border:1px solid rgba(218,41,28,.45);border-radius:20px;
+    backdrop-filter:blur(18px);box-shadow:0 0 35px rgba(218,41,28,.10);transition:.3s
+}
+.navbar:hover{border-color:#da291c;box-shadow:0 0 45px rgba(218,41,28,.22)}
+.logo{display:flex;align-items:center;gap:10px;font-size:23px;font-weight:bold;white-space:nowrap}
+.logo b{color:#da291c}
+.logo-badge{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#da291c;box-shadow:0 0 20px rgba(218,41,28,.65)}
+.menu{list-style:none;display:flex;gap:25px;flex-wrap:wrap;justify-content:center}
+.menu a{position:relative;text-decoration:none;color:#ccc;font-size:14px;transition:.3s}
+.menu a:hover{color:#fff;text-shadow:0 0 12px #da291c}
+.menu a:after{content:"";position:absolute;width:0;height:2px;left:50%;bottom:-7px;transform:translateX(-50%);background:#da291c;box-shadow:0 0 9px #da291c;transition:.3s}
+.menu a:hover:after{width:100%}
+
+.hero{
+    max-width:1280px;min-height:88vh;margin:auto;padding:80px 25px 55px;
+    display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px
+}
+.hero-text{animation:up 1s ease both}
+.eyebrow{color:#da291c;font-weight:bold;letter-spacing:3px;font-size:13px;margin-bottom:18px}
+.hero h1{font-size:clamp(52px,7vw,92px);line-height:.91;margin-bottom:25px;text-shadow:0 0 35px rgba(218,41,28,.18)}
+.hero h1 span{display:block;color:#da291c}
+.hero p{color:#aaa;font-size:18px;line-height:2;max-width:650px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;text-decoration:none;padding:14px 25px;border-radius:30px;font-weight:bold;transition:.3s}
+.red{background:#da291c;border:2px solid #da291c;box-shadow:0 0 25px rgba(218,41,28,.3)}
+.red:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 0 35px rgba(218,41,28,.65)}
+.dark{background:#111;border:2px solid #333;color:#ddd}
+.dark:hover{border-color:#da291c;transform:translateY(-4px)}
+
+.hero-visual{min-height:470px;display:grid;place-items:center;position:relative;animation:up 1s .2s ease both}
+.orbit{position:absolute;width:440px;height:440px;border:1px solid rgba(218,41,28,.22);border-radius:50%;animation:spin 18s linear infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:#da291c;box-shadow:0 0 20px #da291c}
+.orbit:before{top:40px;left:60px}.orbit:after{bottom:45px;right:55px}
+.crest{
+    width:285px;height:340px;clip-path:polygon(10% 0,90% 0,100% 12%,94% 78%,50% 100%,6% 78%,0 12%);
+    background:linear-gradient(145deg,#e63222,#86130d);border:4px solid #f1c453;
+    box-shadow:0 0 40px rgba(218,41,28,.45),inset 0 0 35px rgba(0,0,0,.25);
+    display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:28px 20px 36px;text-align:center
+}
+.crest small{color:#f1c453;font-weight:bold;letter-spacing:2px}
+.crest .devil{font-size:68px;filter:drop-shadow(0 7px 5px rgba(0,0,0,.45))}
+.crest h2{font-size:30px}.crest strong{color:#f1c453;letter-spacing:3px}
+.light-line{height:1px;background:linear-gradient(90deg,transparent,#da291c,transparent);box-shadow:0 0 16px #da291c;animation:pulse 2s infinite}
+
+section{scroll-margin-top:110px}
+.section{max-width:1200px;margin:110px auto;padding:0 24px}
+.title{text-align:center;margin-bottom:50px}
+.title .eyebrow{margin-bottom:9px}
+.title h2{font-size:clamp(32px,5vw,50px)}
+.title p{color:#888;max-width:750px;margin:14px auto 0;line-height:2}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{
+    position:relative;overflow:hidden;min-height:245px;padding:30px 25px;border-radius:22px;
+    background:linear-gradient(145deg,rgba(25,25,25,.95),rgba(12,12,12,.95));
+    border:1px solid #2b2b2b;transition:.4s;animation:up .8s ease both
+}
+.card:nth-child(2){animation-delay:.15s}.card:nth-child(3){animation-delay:.3s}
+.card:before{
+    content:"";position:absolute;top:0;left:-110%;width:60%;height:100%;
+    background:linear-gradient(90deg,transparent,rgba(218,41,28,.25),transparent);
+    transform:skewX(-20deg);animation:shine 4s linear infinite
+}
+.card-content{position:relative;z-index:2}
+.card:hover{transform:translateY(-10px);border-color:#da291c;box-shadow:0 18px 45px rgba(218,41,28,.16)}
+.card-icon{font-size:43px;margin-bottom:18px}.card h3{font-size:22px;margin-bottom:12px}.card p{color:#aaa;line-height:1.9}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.panel{
+    position:relative;overflow:hidden;padding:35px;border-radius:25px;background:linear-gradient(145deg,#171717,#0b0b0b);
+    border:1px solid #2b2b2b
+}
+.panel:after{content:"";position:absolute;width:220px;height:220px;background:#da291c;filter:blur(80px);opacity:.06;left:-80px;bottom:-90px}
+.panel h3{color:#da291c;font-size:27px;margin-bottom:18px}.panel p{color:#bbb;line-height:2.1}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:25px}
+.fact{background:#101010;border:1px solid #242424;border-radius:15px;padding:18px}
+.fact strong{display:block;color:#da291c;font-size:25px;margin-bottom:6px}.fact span{color:#888;font-size:12px}
+
+.players{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.player{
+    min-height:430px;position:relative;overflow:hidden;border-radius:22px;border:1px solid #2b2b2b;
+    background:#111;transition:.4s
+}
+.player img{width:100%;height:270px;object-fit:cover;display:block;filter:saturate(.9);transition:.5s}
+.player:hover{transform:translateY(-10px);border-color:#da291c;box-shadow:0 18px 45px rgba(218,41,28,.18)}
+.player:hover img{transform:scale(1.06);filter:saturate(1.15)}
+.player-info{padding:20px}
+.player-info h3{font-size:21px;margin-bottom:7px}.player-info .role{color:#da291c;font-size:13px;font-weight:bold}
+.player-info p{color:#999;font-size:13px;line-height:1.8;margin-top:10px}
+.number{position:absolute;top:15px;left:15px;font-size:34px;font-weight:900;color:#fff;text-shadow:0 0 12px #000;z-index:2}
+
+.legend-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.legend{
+    position:relative;overflow:hidden;min-height:430px;border-radius:22px;border:1px solid #2b2b2b;background:#101010;transition:.4s
+}
+.legend img{width:100%;height:290px;object-fit:cover;display:block;transition:.5s;filter:grayscale(.15)}
+.legend:hover{transform:translateY(-10px);border-color:#da291c;box-shadow:0 18px 45px rgba(218,41,28,.18)}
+.legend:hover img{transform:scale(1.06);filter:grayscale(0)}
+.legend-info{padding:18px}.legend-info h3{font-size:21px;margin-bottom:5px}.legend-info p{color:#999;font-size:13px;line-height:1.8}.tag{color:#da291c;font-size:12px;font-weight:bold}
+
+.trophies{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px
+}
+.trophy{
+    position:relative;overflow:hidden;min-height:245px;padding:25px;border-radius:22px;
+    background:linear-gradient(145deg,#181818,#0d0d0d);border:1px solid #2b2b2b;transition:.4s
+}
+.trophy:hover{transform:translateY(-8px);border-color:#f1c453;box-shadow:0 15px 40px rgba(241,196,83,.10)}
+.trophy .cup{font-size:47px;margin-bottom:12px}.trophy strong{font-size:43px;color:#f1c453;display:block}.trophy h3{margin:5px 0 8px}.trophy p{color:#888;font-size:12px;line-height:1.7}
+.trophy-photo{
+    margin-top:28px;border-radius:25px;overflow:hidden;border:1px solid #333;position:relative
+}
+.trophy-photo img{width:100%;height:400px;object-fit:cover;display:block;filter:brightness(.7)}
+.trophy-photo div{position:absolute;inset:auto 0 0;padding:35px;background:linear-gradient(transparent,rgba(0,0,0,.95))}
+.trophy-photo h3{font-size:30px}.trophy-photo p{color:#bbb;margin-top:8px}
+
+.timeline{max-width:900px;margin:auto;position:relative}
+.timeline:before{content:"";position:absolute;top:0;bottom:0;right:50%;width:2px;background:#da291c;box-shadow:0 0 15px #da291c}
+.event{width:45%;padding:24px;border-radius:18px;background:rgba(20,20,20,.92);border:1px solid #2b2b2b;margin-bottom:38px;transition:.35s}
+.event:nth-child(odd){margin-left:0}.event:nth-child(even){margin-right:55%}
+.event:hover{transform:translateY(-7px);border-color:#da291c}.year{color:#da291c;font-size:25px;font-weight:bold;margin-bottom:7px}.event p{color:#999;line-height:1.9;font-size:13px}
+
+.stadium{
+    min-height:390px;border-radius:28px;border:1px solid rgba(218,41,28,.45);
+    background:radial-gradient(circle at center,rgba(218,41,28,.28),transparent 55%),linear-gradient(135deg,#181818,#080808);
+    display:grid;place-items:center;text-align:center;padding:50px 25px;position:relative;overflow:hidden
+}
+.stadium:before{content:"OLD TRAFFORD";position:absolute;font-size:clamp(50px,10vw,130px);font-weight:900;color:rgba(255,255,255,.025);white-space:nowrap;transform:rotate(-8deg)}
+.stadium-content{position:relative;z-index:2}.stadium-icon{font-size:70px}.stadium h2{font-size:clamp(35px,6vw,60px);margin:12px 0}.stadium p{color:#aaa;line-height:2;max-width:680px}
+
+.quote{text-align:center;padding:80px 20px}.quote .mark{font-size:75px;color:#da291c;line-height:.5}.quote h2{max-width:900px;margin:25px auto;font-size:clamp(28px,5vw,50px);line-height:1.5}.quote p{color:#777}
+
+footer{margin-top:90px;background:#050505;border-top:1px solid #da291c;text-align:center}
+.footer-content{padding:70px 20px 45px}.footer-logo{font-size:34px;font-weight:bold}.footer-logo span{color:#da291c}
+.footer-text{color:#777;margin:16px 0 28px}.footer-links{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}.footer-links a{color:#aaa;text-decoration:none;transition:.3s}.footer-links a:hover{color:#da291c}
+.footer-bottom{border-top:1px solid #1d1d1d;padding:20px;display:flex;justify-content:space-between;color:#555;font-size:12px}
+
+@keyframes up{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shine{0%{left:-110%}100%{left:150%}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+
+@media(max-width:900px){
+    .hero{grid-template-columns:1fr;text-align:center}.hero p{margin:auto}.buttons{justify-content:center}
+    .cards,.about{grid-template-columns:1fr}.players,.legend-grid{grid-template-columns:1fr 1fr}.trophies{grid-template-columns:1fr 1fr}
+    .timeline:before{right:20px}.event,.event:nth-child(odd),.event:nth-child(even){width:calc(100% - 55px);margin-right:55px;margin-left:0}
+}
+@media(max-width:600px){
+    .header{padding:0 9px}.navbar{flex-direction:column;padding:13px;gap:12px}.menu{gap:14px}.menu a{font-size:12px}
+    .hero{padding:55px 17px 30px}.hero h1{font-size:53px}.hero p{font-size:15px}.hero-visual{min-height:330px}
+    .orbit{width:285px;height:285px}.crest{width:220px;height:270px}.crest .devil{font-size:48px}.crest h2{font-size:23px}
+    .section{margin:80px auto;padding:0 16px}.players,.legend-grid,.trophies{grid-template-columns:1fr}
+    .about .panel{padding:25px}.facts{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:9px}
+}
+
+.logo-badge img{
+    width:30px;
+    height:30px;
+    object-fit:contain;
+    display:block;
+}
+.hero-logo{
+    width:105px;
+    height:125px;
+    object-fit:contain;
+    display:block;
+    filter:drop-shadow(0 8px 8px rgba(0,0,0,.45));
+}
+.footer-logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+}
+.footer-logo-img{
+    width:48px;
+    height:58px;
+    object-fit:contain;
+    display:inline-block;
+}
+.author-credit{
+    margin-top:22px;
+    color:#da291c;
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:1px;
+    text-shadow:0 0 12px rgba(218,41,28,.35);
+}
+
+
+/* === SIR ALEX FERGUSON TRIBUTE + DR BEHFAR === */
+.fergie-section{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 0%,rgba(218,41,28,.18),transparent 48%),#070707}
+.fergie-section:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.035) 50%,transparent 65%);transform:translateX(-100%);animation:fergieSweep 7s linear infinite}
+@keyframes fergieSweep{to{transform:translateX(100%)}}
+.fergie-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:35px}
+.fergie-card{position:relative;overflow:hidden;border:1px solid rgba(218,41,28,.3);border-radius:22px;background:linear-gradient(145deg,#171717,#080808);box-shadow:0 20px 55px rgba(0,0,0,.4)}
+.fergie-card:hover{transform:translateY(-7px);border-color:#da291c;box-shadow:0 25px 65px rgba(218,41,28,.22)}
+.fergie-portrait{width:100%;height:440px;object-fit:cover;object-position:center top;display:block}
+.fergie-body{padding:25px}
+.fergie-body h3{font-size:28px;color:#fff;margin:15px 0 12px}
+.fergie-body p{color:#c5c5c5;line-height:2;font-size:15px}
+.fergie-badge{display:inline-flex;padding:9px 15px;border:1px solid rgba(218,41,28,.5);border-radius:999px;color:#fff;background:rgba(218,41,28,.1);font-weight:900}
+.hall-of-fame{margin-top:30px;padding:38px 25px;border:1px solid rgba(218,41,28,.35);border-radius:25px;background:linear-gradient(145deg,rgba(218,41,28,.14),rgba(255,255,255,.025));text-align:center}
+.hall-of-fame h3{font-size:32px;color:#fff;margin:14px 0}
+.hall-of-fame p{max-width:900px;margin:auto;color:#ccc;line-height:2}
+.fergie-quote{font-size:clamp(22px,3vw,38px);line-height:1.5;font-weight:900;color:#fff;max-width:900px;margin:35px auto 0;text-shadow:0 0 25px rgba(218,41,28,.25)}
+.doctor-credit{margin:32px auto 0;padding:18px 30px;width:max-content;max-width:90%;border:1px solid rgba(218,41,28,.55);border-radius:999px;background:linear-gradient(90deg,#100000,#2a0000,#100000);box-shadow:0 0 35px rgba(218,41,28,.24);color:#fff;font-weight:1000;letter-spacing:2px;font-size:18px}
+.doctor-credit span{color:#da291c;text-shadow:0 0 15px rgba(218,41,28,.7)}
+@media(max-width:650px){.fergie-portrait{height:340px}.doctor-credit{font-size:14px;letter-spacing:1px;padding:15px 20px}}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<nav class="navbar">
+    <div class="logo"><div class="logo-badge"><img src="https://mutv.manutd.com/assets/images/mu_logo.png" alt="Manchester United logo"></div>United <b> manchester</b></div>
+    <ul class="menu">
+        <li><a href="#home">خانه</a></li>
+        <li><a href="#about">باشگاه</a></li>
+        <li><a href="#players">بازیکنان</a></li>
+        <li><a href="#legends">اسطوره‌ها</a></li>
+        <li><a href="#trophies">افتخارات</a></li>
+        <li><a href="#history">تاریخچه</a></li>
+    </ul>
+<a href="#ferguson">سر الکس فرگوسن</a></nav>
+</header>
+
+<main id="home">
+
+<section class="hero">
+    <div class="hero-text">
+        <div class="eyebrow">THE RED DEVILS • MANCHESTER</div>
+        <h1>MANCHESTER <span>UNITED</span></h1>
+        <p>
+            وارد دنیای شیاطین سرخ شو؛ جایی که تاریخ، بازیکنان افسانه‌ای،
+            جام‌های بزرگ و شور هواداری در یک نام خلاصه می‌شوند.
+        </p>
+        <div class="buttons">
+            <a class="btn red" href="#players">بازیکنان 🔥</a>
+            <a class="btn dark" href="#trophies">تالار افتخارات 🏆</a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="orbit"></div>
+        <div class="crest">
+            <small>MANCHESTER</small>
+            <img class="hero-logo" src="https://mutv.manutd.com/assets/images/mu_logo.png" alt="Manchester United crest">
+            <h2>UNITED</h2>
+            <strong>RED DEVILS</strong>
+        </div>
+    </div>
+</section>
+
+<div class="light-line"></div>
+
+<section class="section" id="about">
+    <div class="title">
+        <div class="eyebrow">THE CLUB</div>
+        <h2>منچستر یونایتد؛ بیشتر از یک باشگاه 🔴</h2>
+        <p>باشگاهی با بیش از یک قرن تاریخ، نسل‌های مختلف ستاره‌ها و یکی از شناخته‌شده‌ترین هویت‌های فوتبال جهان.</p>
+    </div>
+
+    <div class="cards">
+        <article class="card"><div class="card-content"><div class="card-icon">🏆</div><h3>تاریخ پرافتخار</h3><p>یونایتد ۲۰ قهرمانی لیگ انگلیس و ۳ قهرمانی اروپا را در کارنامه دارد.</p></div></article>
+        <article class="card"><div class="card-content"><div class="card-icon">👑</div><h3>نسل‌های طلایی</h3><p>از بابی چارلتون و جورج بست تا کانتونا، گیگز، بکام، رونالدو و رونی.</p></div></article>
+        <article class="card"><div class="card-content"><div class="card-icon">🌍</div><h3>هواداران جهانی</h3><p>نام Manchester United در سراسر جهان با پیراهن قرمز و Old Trafford شناخته می‌شود.</p></div></article>
+    </div>
+</section>
+
+<section class="section">
+    <div class="about">
+        <div class="panel">
+            <h3>داستان باشگاه</h3>
+            <p>
+                باشگاه در سال ۱۸۷۸ با نام Newton Heath شکل گرفت، در سال ۱۹۰۲
+                نام Manchester United را گرفت و از سال ۱۹۱۰ خانه‌اش Old Trafford بوده است.
+                مسیر باشگاه شامل دوره‌های طلایی، بازسازی‌های تاریخی و نسل‌های متعدد بازیکنان است.
+            </p>
+            <div class="facts">
+                <div class="fact"><strong>1878</strong><span>آغاز داستان</span></div>
+                <div class="fact"><strong>1902</strong><span>تغییر نام</span></div>
+                <div class="fact"><strong>1910</strong><span>ورود به Old Trafford</span></div>
+                <div class="fact"><strong>RED DEVILS</strong><span>لقب مشهور</span></div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3>فراتر از ۹۰ دقیقه</h3>
+            <p>
+                برای هوادار، فوتبال فقط نتیجه نیست؛ صدای سکوها، پیراهن قرمز،
+                گل‌های بزرگ و خاطرات شب‌های اروپایی بخشی از تجربه‌ای هستند که
+                یک باشگاه را به بخشی از زندگی تبدیل می‌کنند.
+            </p>
+            <div class="facts">
+                <div class="fact"><strong>⚽</strong><span>فوتبال</span></div>
+                <div class="fact"><strong>🔥</strong><span>شور هواداری</span></div>
+                <div class="fact"><strong>🏟️</strong><span>Theatre of Dreams</span></div>
+                <div class="fact"><strong>🔴</strong><span>Red Devils</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="players">
+    <div class="title">
+        <div class="eyebrow">2026/27 FIRST TEAM</div>
+        <h2>بازیکنان فعلی</h2>
+        
+    </div>
+
+    <div class="players">
+
+        <article class="player">
+            <div class="number">08</div>
+            <img src="https://cdn.oddrun.ir/news/800/images/2026/08/31/17881884839240.jpeg" alt="Bruno Fernandes">
+            <div class="player-info">
+                <h3>برونو فرناندز</h3><div class="role">MIDFIELDER • PORTUGAL</div>
+                <p>هافبک پرتغالی و شماره ۸ یونایتد؛ از چهره‌های مهم خط میانی و کاپیتانی تیم.</p>
+            </div>
+        </article>
+
+        <article class="player">
+            <div class="number">19</div>
+            <img src="https://vstatic.vietnam.vn/vietnam/resource/IMAGE/2025/10/26/1761452929059_2025_10_25t183043z_1463829042_up1elap1ff6nd_rtrmadp_3_soccer_england_mun_bha.jpeg" alt="Bryan Mbeumo">
+            <div class="player-info">
+                <h3>برایان امبومو</h3><div class="role">FORWARD • CAMEROON</div>
+                <p>مهاجم کامرونی و شماره ۱۹؛ یکی از گزینه‌های هجومی تیم در فصل ۲۰۲۶/۲۷.</p>
+            </div>
+        </article>
+
+        <article class="player">
+            <div class="number">10</div>
+            <img src="https://vstatic.vietnam.vn/vietnam/resource/IMAGE/2025/10/26/1761412118728_cas.jpeg" alt="Matheus Cunha">
+            <div class="player-info">
+                <h3>ماتئوس کونیا</h3><div class="role">FORWARD • BRAZIL</div>
+                <p>مهاجم برزیلی و شماره ۱۰؛ بازیکنی تکنیکی برای بخش هجومی یونایتد.</p>
+            </div>
+        </article>
+
+        <article class="player">
+            <div class="number">30</div>
+            <img src="https://cdn.oddrun.ir/news/800/images/2026/07/31/17855194946683.jpeg" alt="sesko">
+            <div class="player-info">
+                <h3>بنجامین ششکو</h3><div class="role">FORWARD • SLOVENIA</div>
+                <p>مهاجم اسلوونیایی و شماره ۳۰؛ یکی از گزینه‌های خط حمله در فهرست فصل ۲۰۲۶/۲۷.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="section" id="legends">
+    <div class="title">
+        <div class="eyebrow">UNITED LEGENDS</div>
+        <h2>اسطوره‌های سرخ</h2>
+        <p>چند نام ماندگار که بخشی از هویت تاریخی منچستر یونایتد را ساخته‌اند.</p>
+    </div>
+
+    <div class="legend-grid">
+
+        <article class="legend">
+            <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cristiano_Ronaldo_~_Manchester_United.jpg" alt="Cristiano Ronaldo">
+            <div class="legend-info"><div class="tag">NUMBER 7 • PORTUGAL</div><h3>کریستیانو رونالدو</h3><p>ستاره پرتغالی که در دو دوره برای یونایتد بازی کرد و در دوره نخست خود به شهرت جهانی رسید.</p></div>
+        </article>
+
+        <article class="legend">
+            <img src="https://cdn.tarafdari.com/tarafdari-static-files/ts1.tarafdari.com/contents/user199008/news/giggs402.jpg" alt="Ryan Giggs">
+            <div class="legend-info"><div class="tag">LEGEND • WALES</div><h3>رایان گیگز</h3><p>یکی از نمادهای ماندگار باشگاه و بازیکنی با سال‌های طولانی حضور در تیم اول.</p></div>
+        </article>
+
+        <article class="legend">
+            <img src="https://news-cdn.varzesh3.com/files/pictures/01602981.jpg?w=650" alt="Eric Cantona">
+            <div class="legend-info"><div class="tag">THE KING • FRANCE</div><h3>اریک کانتونا</h3><p>مهاجم فرانسوی و یکی از چهره‌های مهم نسل آغازین دوران طلایی لیگ برتر یونایتد.</p></div>
+        </article>
+
+        <article class="legend">
+            <img src="https://cdn.tarafdari.com/tarafdari-static-files/ts19.tarafdari.com/contents/user899364/content-article/finds-15787544858.jpg" alt="David Beckham">
+            <div class="legend-info"><div class="tag">NUMBER 7 • ENGLAND</div><h3>دیوید بکام</h3><p>هافبک انگلیسی مشهور با ارسال‌ها و ضربات ایستگاهی که سال‌ها پیراهن یونایتد را پوشید.</p></div>
+        </article>
+
+    </div>
+</section>
+
+<section class="section" id="trophies">
+    <div class="title">
+        <div class="eyebrow">TROPHY ROOM</div>
+        <h2>تالار افتخارات 🏆</h2>
+        <p>اعداد زیر بر اساس فهرست رسمی افتخارات باشگاه Manchester United هستند.</p>
+    </div>
+
+    <div class="trophies">
+        <div class="trophy"><div class="cup">🏆</div><strong>20</strong><h3>قهرمانی لیگ</h3><p>شامل ۱۳ قهرمانی Premier League و ۷ قهرمانی First Division پیش از ۱۹۹۲.</p></div>
+        <div class="trophy"><div class="cup">🌟</div><strong>3</strong><h3>Champions League</h3><p>قهرمانی اروپا در سال‌های ۱۹۶۸، ۱۹۹۹ و ۲۰۰۸.</p></div>
+        <div class="trophy"><div class="cup">🏆</div><strong>13</strong><h3>FA Cup</h3><p>۱۳ قهرمانی در جام حذفی انگلیس؛ آخرین مورد در ۲۰۲۴.</p></div>
+        <div class="trophy"><div class="cup">🥇</div><strong>6</strong><h3>League Cup</h3><p>۶ قهرمانی در جام اتحادیه انگلیس.</p></div>
+        <div class="trophy"><div class="cup">🌍</div><strong>1</strong><h3>Europa League</h3><p>قهرمانی در فصل ۲۰۱۶/۱۷.</p></div>
+        <div class="trophy"><div class="cup">🌎</div><strong>1</strong><h3>Club World Cup</h3><p>قهرمانی جام باشگاه‌های جهان در سال ۲۰۰۸.</p></div>
+        <div class="trophy"><div class="cup">⭐</div><strong>1</strong><h3>UEFA Super Cup</h3><p>قهرمانی در سال ۱۹۹۱.</p></div>
+        <div class="trophy"><div class="cup">🛡️</div><strong>21</strong><h3>Community Shield</h3><p>۲۱ عنوان رسمی در این رقابت، با احتساب موارد مشترک.</p></div>
+    </div>
+
+    <div class="trophy-photo">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Manchester_United_trophy_cabinet.jpg" alt="Manchester United trophy cabinet">
+        <div><h3>یک کابینه پر از خاطره</h3><p>جام‌ها فقط اعداد نیستند؛ هر کدام بخشی از داستان باشگاه‌اند.</p></div>
+    </div>
+</section>
+
+
+<section class="section fergie-section" id="ferguson">
+  <div class="container">
+    <div class="section-title">
+      <span>THE BOSS • THE LEGEND</span>
+      <h2>سر الکس فرگوسن</h2>
+      <p>ادای احترام به یکی از ماندگارترین چهره‌های تاریخ منچستر یونایتد.</p>
+    </div>
+
+    <div class="fergie-grid">
+      <div class="fergie-card">
+        <img class="fergie-portrait"
+             src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Alex_Ferguson_02.jpg/960px-Alex_Ferguson_02.jpg?utm_source=fa.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
+             alt="Sir Alex Ferguson">
+      </div>
+
+      <div class="fergie-card">
+        <div class="fergie-body">
+          <span class="fergie-badge">🔴 1986 — 2013</span>
+          <h3>۲۶ سال؛ یک میراث جاودانه</h3>
+          <p>
+            سر الکس فرگوسن در سال ۱۹۸۶ هدایت منچستر یونایتد را بر عهده گرفت
+            و در پایان فصل ۲۰۱۲/۱۳ از مربیگری بازنشسته شد.
+          </p>
+          <p>
+            در دوران او، منچستر یونایتد ۱۳ بار قهرمان لیگ برتر شد،
+            دو بار قهرمان اروپا شد و در فصل ۱۹۹۸/۹۹ سه‌گانه تاریخی را به دست آورد.
+          </p>
+          <p>
+            مهم‌تر از جام‌ها، فرگوسن نسلی پس از نسل دیگر ساخت و برای دهه‌ها
+            فرهنگ رقابت، جاه‌طلبی و بازگشت تا آخرین لحظه را در باشگاه زنده نگه داشت.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hall-of-fame">
+      <span class="fergie-badge">★ HALL OF HONOUR ★</span>
+      <h3>برای سر الکس؛ با نهایت احترام</h3>
+      <p>
+        برای سال‌هایی که گذشت، برای جام‌هایی که بالا رفت،
+        برای بازیکنانی که ساخته شدند و برای شب‌هایی که هواداران هرگز فراموش نمی‌کنند.
+        نام سر الکس فرگوسن برای همیشه بخشی از داستان منچستر یونایتد خواهد بود.
+      </p>
+      <div class="fergie-quote">
+        THE BOSS. THE BUILDER. THE LEGEND. 🔴
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="history">
+    <div class="title">
+        <div class="eyebrow">A JOURNEY THROUGH TIME</div>
+        <h2>خط زمانی تاریخ یونایتد</h2>
+        <p>چند نقطه کلیدی از داستان باشگاه.</p>
+    </div>
+
+    <div class="timeline">
+        <div class="event"><div class="year">1878</div><h3>Newton Heath</h3><p>آغاز داستان باشگاه در منچستر.</p></div>
+        <div class="event"><div class="year">1902</div><h3>Manchester United</h3><p>نام باشگاه به Manchester United تغییر کرد.</p></div>
+        <div class="event"><div class="year">1910</div><h3>Old Trafford</h3><p>یونایتد وارد خانه تاریخی خود شد.</p></div>
+        <div class="event"><div class="year">1968</div><h3>اولین قهرمانی اروپا</h3><p>یونایتد با قهرمانی در European Cup به نخستین باشگاه انگلیسی برنده این جام تبدیل شد.</p></div>
+        <div class="event"><div class="year">1999</div><h3>Treble</h3><p>فصل تاریخی سه‌گانه با قهرمانی لیگ، FA Cup و Champions League.</p></div>
+        <div class="event"><div class="year">2008</div><h3>بازگشت به قله اروپا</h3><p>یونایتد بار دیگر قهرمان Champions League شد.</p></div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="stadium">
+        <div class="stadium-content">
+            <div class="stadium-icon">🏟️</div>
+            <h2>OLD TRAFFORD</h2>
+            <p>
+                خانه تاریخی منچستر یونایتد که از سال ۱۹۱۰ محل برگزاری مسابقات خانگی باشگاه است
+                و به «The Theatre of Dreams» شهرت دارد.
+            </p>
+            <div style="margin-top:28px"><a class="btn red" href="#home">بازگشت به بالا ↑</a></div>
+        </div>
+    </div>
+</section>
+
+<section class="quote">
+    <div class="mark">“</div>
+    <h2>فوتبال بیشتر از ۹۰ دقیقه‌ست؛ بعضی تیم‌ها تبدیل به بخشی از زندگی می‌شن.</h2>
+    <p>Manchester United • Red Devils</p>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo"><img class="footer-logo-img" src="https://mutv.manutd.com/assets/images/mu_logo.png" alt="Manchester United crest"> Manchester <span>United</span></div>
+        <p class="footer-text">Welcome to the world of the Red Devils ❤️</p>
+        <div class="footer-links">
+            <a href="#home">خانه</a><a href="#players">بازیکنان</a><a href="#legends">اسطوره‌ها</a>
+            <a href="#trophies">افتخارات</a><a href="#history">تاریخچه</a>
+        </div>
+    </div>
+    <div class="doctor-credit">این اثر با عشق به منچستر یونایتد — <span>کاری از Dr. Behfar</span> 🔴</div>
+    <div class="footer-bottom">
+        <span>© 2026 Manchester United </span>
+        
+    </div>
+</footer>
+
+</body>
+</html>
