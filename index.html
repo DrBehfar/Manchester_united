@@ -409,6 +409,72 @@ footer{margin-top:90px;background:#050505;border-top:1px solid #da291c;text-alig
         </article>
 
     </div>
+<div style="text-align:center; margin-top:40px;">
+    <a href="players.html" class="players-btn">
+        <span>مشاهده همه بازیکنان</span>
+        <b>←</b>
+    </a>
+</div>
+
+<style>
+.players-btn{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:18px;
+    padding:15px 28px;
+    color:#fff;
+    text-decoration:none;
+    font-weight:900;
+    font-size:15px;
+    border:1px solid rgba(218,41,28,.7);
+    border-radius:14px;
+    background:linear-gradient(135deg,#180707,#090909);
+    box-shadow:
+        0 0 20px rgba(218,41,28,.18),
+        inset 0 0 20px rgba(218,41,28,.06);
+    overflow:hidden;
+    transition:.35s ease;
+}
+
+.players-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.12),
+        transparent
+    );
+    transition:.6s;
+}
+
+.players-btn:hover::before{
+    left:100%;
+}
+
+.players-btn:hover{
+    transform:translateY(-5px);
+    border-color:#da291c;
+    box-shadow:
+        0 10px 35px rgba(218,41,28,.3),
+        inset 0 0 25px rgba(218,41,28,.1);
+}
+
+.players-btn b{
+    color:#da291c;
+    font-size:22px;
+    transition:.3s;
+}
+
+.players-btn:hover b{
+    transform:translateX(-5px);
+}
+</style>
 </section>
 
 <section class="section" id="legends">
