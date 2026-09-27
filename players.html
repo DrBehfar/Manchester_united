@@ -748,9 +748,114 @@ position:"دروازه‌بان"
 
 
 const squad = document.getElementById("squad");
+const searchInput = document.getElementById("playerSearch");
+const filterButtons = document.querySelectorAll(".filter");
 
+let currentPosition = "همه";
 
-groups.forEach(group => {
+function renderPlayers() {
+    squad.innerHTML = "";
+
+    groups.forEach(group => {
+
+        const filtered = players.filter(player => {
+
+            const matchesPosition =
+                currentPosition === "همه" ||
+                player.position === currentPosition;
+
+            const searchText =
+                searchInput.value.trim().toLowerCase();
+
+            const matchesSearch =
+                player.name.toLowerCase().includes(searchText) ||
+                player.english.toLowerCase().includes(searchText);
+
+            return player.position === group.position &&
+                   matchesPosition &&
+                   matchesSearch;
+        });
+
+        if (filtered.length === 0) return;
+
+        const title = document.createElement("div");
+        title.className = "position-title";
+
+        title.innerHTML = `
+            <h2>${group.title}</h2>
+            <div class="position-line"></div>
+        `;
+
+        squad.appendChild(title);
+
+        const grid = document.createElement("div");
+        grid.className = "players-grid";
+
+        filtered.forEach(player => {
+
+            const card = document.createElement("article");
+            card.className = "player-card";
+
+            card.innerHTML = `
+                <div class="player-number">
+                    #${player.number}
+                </div>
+
+                <img
+                    class="player-image"
+                    src="${player.image}"
+                    alt="${player.name} ${player.english}، بازیکن منچستر یونایتد"
+                    loading="lazy"
+                >
+
+                <div class="player-info">
+
+                    <h3>${player.name}</h3>
+
+                    <div class="english">
+                        ${player.english}
+                    </div>
+
+                    <div class="player-meta">
+                        <span class="badge">
+                            ${player.position}
+                        </span>
+
+                        <span class="badge">
+                            ${player.country}
+                        </span>
+                    </div>
+
+                </div>
+            `;
+
+            grid.appendChild(card);
+        });
+
+        squad.appendChild(grid);
+    });
+}
+
+searchInput.addEventListener("input", renderPlayers);
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        currentPosition = button.dataset.position;
+
+        filterButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        renderPlayers();
+    });
+
+});
+
+renderPlayers();
 
 const title = document.createElement("div");
 
