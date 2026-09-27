@@ -784,6 +784,325 @@ Welcome to the world of the Red Devils ❤️
 </div>
 
 </footer>
+<script>
+
+const players = [
+
+{
+name:"برونو فرناندز",
+english:"Bruno Fernandes",
+number:"8",
+position:"هافبک",
+country:"🇵🇹 پرتغال",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896330/media_102559977_102167101.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"ماتئوس کونیا",
+english:"Matheus Cunha",
+number:"10",
+position:"مهاجم",
+country:"🇧🇷 برزیل",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896326/media_102559903_102167027.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"برایان امبومو",
+english:"Bryan Mbeumo",
+number:"19",
+position:"مهاجم",
+country:"🇨🇲 کامرون",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896326/media_102559904_102167026.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"بنجامین ششکو",
+english:"Benjamin Šeško",
+number:"30",
+position:"مهاجم",
+country:"🇸🇮 اسلوونی",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896326/media_102559907_102167031.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"آماد دیالو",
+english:"Amad",
+number:"16",
+position:"مهاجم",
+country:"🇨🇮 ساحل عاج",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896326/media_102559906_102167030.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"مارکوس رشفورد",
+english:"Marcus Rashford",
+number:"9",
+position:"مهاجم",
+country:"🏴 انگلیس",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/6301618/media_125181652_124797291_compressed.jpg?f=center&fmt=webp&h=480&w=720"
+},
+
+{
+name:"جاشوا زیرکزی",
+english:"Joshua Zirkzee",
+number:"11",
+position:"مهاجم",
+country:"🇳🇱 هلند",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896326/media_102559902_102167028.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"کارلوس بالبا",
+english:"Carlos Baleba",
+number:"20",
+position:"هافبک",
+country:"🇨🇲 کامرون",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/5955367/media_120963187_120576617.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"میسون مونت",
+english:"Mason Mount",
+number:"7",
+position:"هافبک",
+country:"🏴 انگلیس",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896330/media_102559976_102167100.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"آندری سانتوس",
+english:"Andrey Santos",
+number:"17",
+position:"هافبک",
+country:"🇧🇷 برزیل",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896330/media_102559981_102167105.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"یوری تیلمانس",
+english:"Youri Tielemans",
+number:"18",
+position:"هافبک",
+country:"🇧🇪 بلژیک",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896330/media_102559976_102167100.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"مانوئل اوگارته",
+english:"Manuel Ugarte",
+number:"25",
+position:"هافبک",
+country:"🇺🇾 اروگوئه",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896330/media_102559981_102167105.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"پاتریک دورگو",
+english:"Patrick Dorgu",
+number:"13",
+position:"مدافع",
+country:"🇩🇰 دانمارک",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559867_102166991.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"دیوگو دالوت",
+english:"Diogo Dalot",
+number:"2",
+position:"مدافع",
+country:"🇵🇹 پرتغال",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559860_102166986.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"ماتیاس دلیخت",
+english:"Matthijs de Ligt",
+number:"4",
+position:"مدافع",
+country:"🇳🇱 هلند",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559865_102166989.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"هری مگوایر",
+english:"Harry Maguire",
+number:"5",
+position:"مدافع",
+country:"🏴 انگلیس",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559861_102166984.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"لیساندرو مارتینز",
+english:"Lisandro Martínez",
+number:"6",
+position:"مدافع",
+country:"🇦🇷 آرژانتین",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559864_102166988.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"نصیر مزراوی",
+english:"Noussair Mazraoui",
+number:"3",
+position:"مدافع",
+country:"🇲🇦 مراکش",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559862_102166985.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"لوک شاو",
+english:"Luke Shaw",
+number:"23",
+position:"مدافع",
+country:"🏴 انگلیس",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896325/media_102559870_102166995.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"کارل دارلو",
+english:"Karl Darlow",
+number:"12",
+position:"دروازه‌بان",
+country:"🏴 ولز",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/5336994/media_113873039_113482082.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"تام هیتون",
+english:"Tom Heaton",
+number:"22",
+position:"دروازه‌بان",
+country:"🏴 انگلیس",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896327/media_102559945_102167073.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"سنّه لامنس",
+english:"Senne Lammens",
+number:"1",
+position:"دروازه‌بان",
+country:"🇧🇪 بلژیک",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896327/media_102559948_102167072.jpg?f=center&fmt=webp&h=981&w=720"
+},
+
+{
+name:"درموت می",
+english:"Dermot Mee",
+number:"45",
+position:"دروازه‌بان",
+country:"🇮🇪 ایرلند شمالی",
+image:"https://dynamic-crop-cdn.scoreplay.io/472/4896327/media_102559949_102167071.jpg?f=center&fmt=webp&h=981&w=720"
+}
+
+
+];
+
+
+
+const groups = [
+
+{
+title:"🔥 مهاجمان",
+positions:["مهاجم"]
+},
+
+{
+title:"⚙️ هافبک‌ها",
+positions:["هافبک"]
+},
+
+{
+title:"🛡️ مدافعان",
+positions:["مدافع"]
+},
+
+{
+title:"🧤 دروازه‌بان‌ها",
+positions:["دروازه‌بان"]
+}
+
+];
+
+
+const squad = document.getElementById("squad");
+
+
+groups.forEach(group => {
+
+const title = document.createElement("div");
+
+title.className="position-title";
+
+title.innerHTML=`
+<h2>${group.title}</h2>
+<div class="position-line"></div>
+`;
+
+squad.appendChild(title);
+
+
+const grid=document.createElement("div");
+
+grid.className="players-grid";
+
+
+players
+.filter(player => group.positions.includes(player.position))
+.forEach(player => {
+
+const card=document.createElement("article");
+
+card.className="player-card";
+
+card.innerHTML=`
+
+<div class="player-number">
+#${player.number}
+</div>
+
+<img
+class="player-image"
+src="${player.image}"
+alt="${player.name} ${player.english}، بازیکن منچستر یونایتد"
+loading="lazy"
+>
+
+<div class="player-info">
+
+<h3>
+${player.name}
+</h3>
+
+<div class="english">
+${player.english}
+</div>
+
+<div class="player-meta">
+
+<span class="badge">
+${player.position}
+</span>
+
+<span class="badge">
+${player.country}
+</span>
+
+</div>
+
+</div>
+
+`;
+
+grid.appendChild(card);
+
+});
+
+squad.appendChild(grid);
+
+});
+
+</script>
 
 </body>
 </html>
