@@ -1024,6 +1024,21 @@ positions:["دروازه‌بان"]
 }
 
 ];
+const squad = document.getElementById("squad");
+
+players.forEach(player => {
+    squad.innerHTML += `
+        <div class="player-card">
+            <img src="${player.image}" alt="${player.english}">
+            <div class="player-info">
+                <span class="player-number">${player.number}</span>
+                <h3>${player.name}</h3>
+                <p>${player.english}</p>
+                <small>${player.position} • ${player.country}</small>
+            </div>
+        </div>
+    `;
+});
 
 
 const squad = document.getElementById("squad");
