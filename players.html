@@ -5,7 +5,54 @@
 <meta property="og:description" content="فهرست و معرفی بازیکنان منچستر یونایتد در فصل ۲۰۲۶/۲۷.">
 <meta property="og:url" content="https://drbehfar.github.io/Manchester_united/players.html">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="fa_IR"><style>
+<meta property="og:locale" content="fa_IR"><style>.player-tools{
+    margin:0 auto 35px;
+    max-width:900px;
+    text-align:center;
+}
+
+#playerSearch{
+    width:100%;
+    padding:16px 20px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,.1);
+    background:#111;
+    color:#fff;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+#playerSearch:focus{
+    border-color:#da291c;
+    box-shadow:0 0 20px rgba(218,41,28,.15);
+}
+
+.filter-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:15px;
+}
+
+.filter{
+    border:1px solid rgba(255,255,255,.1);
+    background:#111;
+    color:#aaa;
+    padding:10px 16px;
+    border-radius:10px;
+    cursor:pointer;
+    font-family:inherit;
+    transition:.3s;
+}
+
+.filter:hover,
+.filter.active{
+    background:#da291c;
+    color:#fff;
+    border-color:#da291c;
+}
 
 *{
     margin:0;
